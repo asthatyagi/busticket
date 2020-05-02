@@ -26,13 +26,15 @@ const userSchema=new mongoose.Schema(
 
 );
 
-const User = mongoose.model('user', userSchema);
-const Admin=mongoose.model('admin',userSchema);
+module.exports = mongoose.model('user', userSchema);
 
-module.exports={
-    User,
-    Admin
-}
+// const user = mongoose.model('user', userSchema);
+// const Admin=mongoose.model('admin',userSchema);
+
+// module.exports={
+//     user,
+//     Admin
+// }
 
 
 

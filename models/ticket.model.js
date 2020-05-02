@@ -5,7 +5,7 @@ const date = mongoose.Schema.Types.Date;
 const ticketSchema=new mongoose.Schema({
    userId:{
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
+   // required: true,
     ref: "user"
    },
    seatNo:{
@@ -26,7 +26,7 @@ const ticketSchema=new mongoose.Schema({
    },
    Date:{
     type:date,
-    required:true
+   required:true
    }
 },
 {timestamps:true}
@@ -35,7 +35,7 @@ const ticketSchema=new mongoose.Schema({
 
 
 
-
+module.exports=mongoose.model('ticket', ticketSchema);
 
 
 

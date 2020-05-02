@@ -1,8 +1,6 @@
 const User=require('../models/user.model');
 const objectId = require('mongodb').ObjectID;
 
-
-
 // add user details
 
 exports.addUser=async(req,res,next)=>{
@@ -32,7 +30,9 @@ exports.addUser=async(req,res,next)=>{
     }
    }
    catch(e){
+       console.log(e)
     return res.status(500).json({
+        
         Body: 'NETWORK_ERROR'
     });
    }
