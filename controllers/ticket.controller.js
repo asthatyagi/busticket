@@ -174,13 +174,7 @@ exports.openAll=async(req,res)=>{
 	const result=await	Ticket.updateMany(
 			{ status: "closed" },
 			{ $set: { "status": 'open' ,"userId":null} }
-			// function(err, result) {
-			//   if (err) {
-			// 	res.send(err);
-			//   } else {
-			// 	res.send(result);
-			//   }
-			// }
+
 		  )
 		  if(result){
 			  res.status(200).json({
