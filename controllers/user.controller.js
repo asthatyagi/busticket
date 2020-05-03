@@ -1,5 +1,5 @@
-const User=require('../models/user.model');
-const Admin=require('../models/user.model');
+const {User,Admin}=require('../models/user.model');
+
 const objectId = require('mongodb').ObjectID;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
