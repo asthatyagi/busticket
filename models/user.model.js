@@ -14,7 +14,14 @@ const userSchema=new mongoose.Schema(
   },
   email:{
     type:String,
-    required:true
+    required:true,
+    unique:true
+  },
+  password:{
+    type: String,
+			minlength: 6,
+			maxlength: 128
+
   },
 
   phone:{
@@ -27,6 +34,7 @@ const userSchema=new mongoose.Schema(
 );
 
 module.exports = mongoose.model('user', userSchema);
+module.exports=mongoose.model('admin',userSchema);
 
 // const user = mongoose.model('user', userSchema);
 // const Admin=mongoose.model('admin',userSchema);
